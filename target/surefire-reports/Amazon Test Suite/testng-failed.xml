@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Amazon Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="Amazon Functional Tests(failed)" verbose="0">
+<suite thread-count="2" parallel="methods" name="Failed suite [Amazon Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="implicitWait" value="10"/>
+  <parameter name="pageLoadTimeout" value="30"/>
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
+  <test thread-count="2" parallel="methods" name="Amazon Functional Tests(failed)" verbose="0">
     <classes>
-      <class name="tests.ProductTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testProductDetails"/>
-          <include name="testMultipleProducts"/>
-        </methods>
-      </class> <!-- tests.ProductTest -->
-      <class name="tests.SearchTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testValidSearch"/>
-          <include name="testInvalidSearch"/>
-        </methods>
-      </class> <!-- tests.SearchTest -->
       <class name="tests.NavigationTest">
         <methods>
           <include name="testSearchNavigation"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- tests.NavigationTest -->
+      <class name="tests.SearchTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="testValidSearch"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="testInvalidSearch"/>
+        </methods>
+      </class> <!-- tests.SearchTest -->
+      <class name="tests.ProductTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="testProductDetails"/>
+          <include name="testMultipleProducts"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- tests.ProductTest -->
     </classes>
   </test> <!-- Amazon Functional Tests(failed) -->
 </suite> <!-- Failed suite [Amazon Test Suite] -->

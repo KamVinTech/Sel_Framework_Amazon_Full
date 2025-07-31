@@ -25,3 +25,4 @@ The project contains a simple test that:
 4. Run the `AmazonTest` class
 
 The test will execute automatically using WebDriverManager for Chrome driver management.
+
