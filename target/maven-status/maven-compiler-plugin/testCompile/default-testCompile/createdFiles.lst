@@ -1,0 +1,4 @@
+base\BaseTest.class
+tests\NavigationTest.class
+tests\SearchTest.class
+tests\ProductTest.class
