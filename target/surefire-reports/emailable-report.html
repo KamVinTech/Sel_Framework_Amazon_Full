@@ -9,27 +9,42 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Amazon Test Suite</th></tr>
-<tr><td><a href="#t0">Amazon Functional Tests</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">211,564</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Amazon Functional Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">6</td><td class="num">287,565</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Amazon Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Amazon Functional Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.NavigationTest</td><td><a href="#m0">testSearchNavigation</a></td><td rowspan="1">1753968988558</td><td rowspan="1">79134</td></tr><tr class="failedodd"><td rowspan="2">tests.ProductTest</td><td><a href="#m1">testMultipleProducts</a></td><td rowspan="1">1753969001988</td><td rowspan="1">79541</td></tr><tr class="failedodd"><td><a href="#m2">testProductDetails</a></td><td rowspan="1">1753969073328</td><td rowspan="1">79886</td></tr><tr class="failedeven"><td rowspan="2">tests.SearchTest</td><td><a href="#m3">testInvalidSearch</a></td><td rowspan="1">1753968957347</td><td rowspan="1">38730</td></tr><tr class="failedeven"><td><a href="#m4">testValidSearch</a></td><td rowspan="1">1753968951770</td><td rowspan="1">2245</td></tr><tr><th colspan="4">Amazon Functional Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.NavigationTest</td><td><a href="#m5">testHomePageElements</a></td><td rowspan="1">1753968958955</td><td rowspan="1">277</td></tr><tr class="passedeven"><td><a href="#m6">testPageTitles</a></td><td rowspan="1">1753968966263</td><td rowspan="1">16988</td></tr><tr class="passedodd"><td rowspan="1">tests.SearchTest</td><td><a href="#m7">testEmptySearch</a></td><td rowspan="1">1753968953231</td><td rowspan="1">469</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Amazon Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Amazon Functional Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.NavigationTest</td><td><a href="#m0">testPageTitles</a></td><td rowspan="1">1754047237776</td><td rowspan="1">11601</td></tr><tr class="failedeven"><td><a href="#m1">testSearchNavigation</a></td><td rowspan="1">1754047249371</td><td rowspan="1">123072</td></tr><tr class="failedodd"><td rowspan="2">tests.ProductTest</td><td><a href="#m2">testMultipleProducts</a></td><td rowspan="1">1754047255335</td><td rowspan="1">79864</td></tr><tr class="failedodd"><td><a href="#m3">testProductDetails</a></td><td rowspan="1">1754047345421</td><td rowspan="1">84728</td></tr><tr class="failedeven"><td rowspan="2">tests.SearchTest</td><td><a href="#m4">testInvalidSearch</a></td><td rowspan="1">1754047168598</td><td rowspan="1">46531</td></tr><tr class="failedeven"><td><a href="#m5">testValidSearch</a></td><td rowspan="1">1754047162737</td><td rowspan="1">53013</td></tr><tr><th colspan="4">Amazon Functional Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.NavigationTest</td><td><a href="#m6">testHomePageElements</a></td><td rowspan="1">1754047219132</td><td rowspan="1">23803</td></tr><tr class="passedodd"><td rowspan="1">tests.SearchTest</td><td><a href="#m7">testEmptySearch</a></td><td rowspan="1">1754047161106</td><td rowspan="1">1703</td></tr></tbody>
 </table>
-<h2>Amazon Functional Tests</h2><h3 id="m0">tests.NavigationTest#testSearchNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31)
-	at tests.NavigationTest.testSearchNavigation(NavigationTest.java:42)
+<h2>Amazon Functional Tests</h2><h3 id="m0">tests.NavigationTest#testPageTitles</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Search results page title should contain search term but was: Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in expected [true] but found [false]
+	at tests.NavigationTest.lambda$testPageTitles$4(NavigationTest.java:117)
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54)
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27)
+	at tests.NavigationTest.testPageTitles(NavigationTest.java:115)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.NavigationTest#testSearchNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Failed to execute verify product details page after 3 attempts
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:49)
+	at tests.NavigationTest.testSearchNavigation(NavigationTest.java:82)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31)
+	at tests.NavigationTest.lambda$testSearchNavigation$2(NavigationTest.java:83)
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54)
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27)
+	... 14 more
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#productTitle&quot;}
   (Session info: chrome=138.0.7204.101)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d8e3d048ab6ab7640f91390dca284f6b, findElement {using=id, value=productTitle}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61915/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d8e3d048ab6ab7640f91390dca284f6b
+Command: [338d1dde661cf24302c72db180a8a0a0, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54764}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54764/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 338d1dde661cf24302c72db180a8a0a0
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -43,15 +58,15 @@ Session ID: d8e3d048ab6ab7640f91390dca284f6b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-	... 15 more
+	... 18 more
 ... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.ProductTest#testMultipleProducts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
+<h3 id="m2">tests.ProductTest#testMultipleProducts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
 	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31)
@@ -65,9 +80,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [20c51b5acedd7e5804bd0b9e250f64ba, findElement {using=id, value=productTitle}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61994/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 20c51b5acedd7e5804bd0b9e250f64ba
+Command: [a3b0c114e8f8784931835a82d7386d01, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54838}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54838/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3b0c114e8f8784931835a82d7386d01
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -81,7 +96,7 @@ Session ID: 20c51b5acedd7e5804bd0b9e250f64ba
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
@@ -89,7 +104,7 @@ Session ID: 20c51b5acedd7e5804bd0b9e250f64ba
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
 	... 15 more
 ... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.ProductTest#testProductDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
+<h3 id="m3">tests.ProductTest#testProductDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
 	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31)
@@ -103,9 +118,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15bd3772126287832e5af7ea1a71d5b8, findElement {using=id, value=productTitle}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62123/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15bd3772126287832e5af7ea1a71d5b8
+Command: [29a8b481e31033b0009aa69b030af478, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54985/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29a8b481e31033b0009aa69b030af478
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -119,7 +134,7 @@ Session ID: 15bd3772126287832e5af7ea1a71d5b8
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
@@ -127,27 +142,27 @@ Session ID: 15bd3772126287832e5af7ea1a71d5b8
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
 	... 15 more
 ... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.SearchTest#testInvalidSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Should either show no results message or have zero products expected [true] but found [false]
-	at tests.SearchTest.testInvalidSearch(SearchTest.java:77)
+<h3 id="m4">tests.SearchTest#testInvalidSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Should show no results message or zero products expected [true] but found [false]
+	at tests.SearchTest.lambda$testInvalidSearch$1(SearchTest.java:84)
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54)
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27)
+	at tests.SearchTest.testInvalidSearch(SearchTest.java:81)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
 ... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.SearchTest#testValidSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Failed to perform search: Error communicating with the remote browser. It may have died.
+<h3 id="m5">tests.SearchTest#testValidSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Could not find any product with valid text
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc5a973c485a4b2e3e7858fd2c16974e, findElement {using=id, value=nav-search-submit-button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc5a973c485a4b2e3e7858fd2c16974e
-	at pages.HomePage.searchProduct(HomePage.java:76)
-	at tests.SearchTest.testValidSearch(SearchTest.java:13)
+Driver info: driver.version: unknown
+	at pages.SearchResultsPage.getFirstProductName(SearchResultsPage.java:299)
+	at tests.SearchTest.testValidSearch(SearchTest.java:38)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
 ... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.NavigationTest#testHomePageElements</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.NavigationTest#testPageTitles</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.NavigationTest#testHomePageElements</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m7">tests.SearchTest#testEmptySearch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

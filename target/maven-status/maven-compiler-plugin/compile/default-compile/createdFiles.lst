@@ -1,14 +1,17 @@
+utils\SmartElementFinder$ElementNotFoundException.class
 pages\ProductDetailsPage.class
 utils\WebDriverFactory.class
 constants\FrameworkConstants.class
 listeners\TestListener.class
 pages\HomePage.class
 utils\ExtentReportManager.class
+utils\SmartElementFinder.class
 utils\ConfigReader.class
 pages\SearchResultsPage.class
 utils\ExcelDataProvider$1.class
 constants\FrameworkException.class
 listeners\RetryAnalyzer.class
 utils\ExcelDataProvider.class
+utils\ExceptionHandler.class
 utils\ScreenshotUtils.class
 com\example\pages\HomePage.class

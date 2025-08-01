@@ -1,41 +1,49 @@
-19:05:41.938 [main] INFO  base.BaseTest - Starting test suite execution
-19:05:41.953 [main] INFO  utils.ConfigReader - Loaded configuration from: src/test/resources/config/config.properties
-19:05:41.953 [main] WARN  utils.ConfigReader - Could not load configuration from: src/test/resources/config/dev.properties
-19:05:42.168 [main] INFO  utils.ExtentReportManager - Extent Reports initialized successfully
-19:05:42.184 [main] INFO  listeners.TestListener - Test Suite started: Amazon Functional Tests
-19:05:42.196 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Starting test class: SearchTest
-19:05:42.217 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testValidSearch
-19:05:42.217 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testEmptySearch
-19:05:42.220 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:05:42.220 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:05:48.102 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:05:48.102 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:05:48.102 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:05:48.102 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:05:51.759 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:05:51.774 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testValidSearch
-19:05:51.775 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
-19:05:53.230 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:05:53.231 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testEmptySearch
-19:05:53.232 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
-19:05:53.702 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testEmptySearch
-19:05:53.704 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testEmptySearch
-19:05:53.704 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:05:54.017 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testValidSearch
-19:05:54.017 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Failure reason: java.lang.RuntimeException: Failed to perform search: Error communicating with the remote browser. It may have died.
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc5a973c485a4b2e3e7858fd2c16974e, findElement {using=id, value=nav-search-submit-button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc5a973c485a4b2e3e7858fd2c16974e
-19:05:54.021 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+16:49:03.001 [main] INFO  base.BaseTest - Starting test suite execution
+16:49:03.011 [main] INFO  utils.ConfigReader - Loaded configuration from: src/test/resources/config/config.properties
+16:49:03.012 [main] WARN  utils.ConfigReader - Could not load configuration from: src/test/resources/config/dev.properties
+16:49:03.284 [main] INFO  utils.ExtentReportManager - Extent Reports initialized successfully
+16:49:03.288 [main] INFO  listeners.TestListener - Test Suite started: Amazon Functional Tests
+16:49:03.354 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Starting test class: SearchTest
+16:49:03.387 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testEmptySearch
+16:49:03.387 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testValidSearch
+16:49:03.390 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:49:03.390 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:49:17.263 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:49:17.263 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:49:17.271 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:49:17.271 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:49:21.097 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:49:21.109 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testEmptySearch
+16:49:21.110 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+16:49:21.111 [TestNG-test=Amazon Functional Tests-2] INFO  tests.SearchTest - Starting empty search test
+16:49:21.112 [TestNG-test=Amazon Functional Tests-2] ERROR pages.HomePage - Product name cannot be null or empty
+16:49:22.736 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:49:22.738 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testValidSearch
+16:49:22.739 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
+16:49:22.740 [TestNG-test=Amazon Functional Tests-1] INFO  tests.SearchTest - Starting valid search test
+16:49:22.808 [TestNG-test=Amazon Functional Tests-2] INFO  tests.SearchTest - Empty search test passed
+16:49:22.812 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testEmptySearch
+16:49:22.816 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testEmptySearch
+16:49:22.816 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:49:23.334 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+16:49:23.336 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testInvalidSearch
+16:49:23.337 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:49:24.777 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:49:24.777 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:49:27.564 [TestNG-test=Amazon Functional Tests-1] INFO  pages.HomePage - Search completed for: iPhone 15 Pro Max
+16:49:28.596 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:49:28.599 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testInvalidSearch
+16:49:28.599 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+16:49:28.602 [TestNG-test=Amazon Functional Tests-2] INFO  tests.SearchTest - Starting invalid product search test
+16:49:32.667 [TestNG-test=Amazon Functional Tests-2] INFO  pages.HomePage - Search completed for: nonexistentproduct1754047168602
+16:50:15.129 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testInvalidSearch
+16:50:15.129 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure details: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
 	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
 	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
 	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
-	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:54) ~[classes/:?]
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
@@ -48,27 +56,75 @@ java.lang.IllegalAccessException: class listeners.TestListener cannot access a m
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-19:05:54.044 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testValidSearch
-19:05:54.064 [TestNG-test=Amazon Functional Tests-1] ERROR utils.ScreenshotUtils - Failed to capture screenshot: Error communicating with the remote browser. It may have died.
+16:50:15.145 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testInvalidSearch
+16:50:15.322 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testInvalidSearch_20250801_165015.png
+16:50:15.322 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:50:15.750 [TestNG-test=Amazon Functional Tests-1] ERROR tests.SearchTest - Valid search test failed: Could not find any product with valid text
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: driver.version: unknown
+org.openqa.selenium.NoSuchElementException: Could not find any product with valid text
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: driver.version: unknown
+	at pages.SearchResultsPage.getFirstProductName(SearchResultsPage.java:299) ~[classes/:?]
+	at tests.SearchTest.testValidSearch(SearchTest.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+16:50:15.750 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testValidSearch
+16:50:15.750 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure details: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
+	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:54) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+16:50:15.767 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testValidSearch
+16:50:15.774 [TestNG-test=Amazon Functional Tests-1] ERROR utils.ScreenshotUtils - Failed to capture screenshot: Error communicating with the remote browser. It may have died.
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc5a973c485a4b2e3e7858fd2c16974e, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc5a973c485a4b2e3e7858fd2c16974e
+Command: [4749357741992e9be20be038e4961e87, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54507}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54507/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4749357741992e9be20be038e4961e87
 org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc5a973c485a4b2e3e7858fd2c16974e, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc5a973c485a4b2e3e7858fd2c16974e
+Command: [4749357741992e9be20be038e4961e87, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54507}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54507/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4749357741992e9be20be038e4961e87
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558) ~[selenium-remote-driver-4.10.0.jar:?]
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590) ~[selenium-remote-driver-4.10.0.jar:?]
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594) ~[selenium-remote-driver-4.10.0.jar:?]
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:316) ~[selenium-remote-driver-4.10.0.jar:?]
 	at utils.ScreenshotUtils.captureScreenshot(ScreenshotUtils.java:31) ~[classes/:?]
-	at base.BaseTest.tearDown(BaseTest.java:70) ~[test-classes/:?]
+	at base.BaseTest.tearDown(BaseTest.java:72) ~[test-classes/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
@@ -87,7 +143,7 @@ Session ID: dc5a973c485a4b2e3e7858fd2c16974e
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:11292
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:33421
 	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73) ~[selenium-remote-driver-4.10.0.jar:?]
 	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.10.0.jar:?]
 	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.10.0.jar:?]
@@ -100,7 +156,7 @@ Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection r
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171) ~[selenium-remote-driver-4.10.0.jar:?]
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531) ~[selenium-remote-driver-4.10.0.jar:?]
 	... 23 more
-Caused by: java.net.ConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:11292
+Caused by: java.net.ConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:33421
 	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179) ~[async-http-client-2.12.3.jar:?]
 	at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108) ~[async-http-client-2.12.3.jar:?]
 	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28) ~[async-http-client-2.12.3.jar:?]
@@ -122,7 +178,7 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt: localhost/
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
 	... 1 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:11292
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:33421
 Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
@@ -137,12 +193,12 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
 	... 1 more
-19:05:54.073 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Error in test cleanup: ScreenCapture path must not be null or empty
+16:50:15.781 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Error in test cleanup: ScreenCapture path must not be null or empty
 java.lang.IllegalArgumentException: ScreenCapture path must not be null or empty
 	at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12) ~[extentreports-5.1.1.jar:?]
 	at com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(ExtentTest.java:1099) ~[extentreports-5.1.1.jar:?]
 	at com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(ExtentTest.java:1107) ~[extentreports-5.1.1.jar:?]
-	at base.BaseTest.tearDown(BaseTest.java:72) ~[test-classes/:?]
+	at base.BaseTest.tearDown(BaseTest.java:74) ~[test-classes/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
@@ -161,50 +217,44 @@ java.lang.IllegalArgumentException: ScreenCapture path must not be null or empty
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-19:05:54.073 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testInvalidSearch
-19:05:54.079 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
-19:05:54.084 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Starting test class: NavigationTest
-19:05:54.086 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testHomePageElements
-19:05:54.086 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:05:55.601 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:05:55.602 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:05:57.346 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:05:57.347 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testInvalidSearch
-19:05:57.347 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
-19:05:58.954 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:05:58.956 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testHomePageElements
-19:05:58.957 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
-19:05:59.232 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testHomePageElements
-19:05:59.233 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testHomePageElements
-19:05:59.234 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:05:59.707 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
-19:05:59.712 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testPageTitles
-19:05:59.713 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:06:02.880 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:06:02.880 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:06:06.261 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:06:06.264 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testPageTitles
-19:06:06.264 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
-19:06:23.261 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testPageTitles
-19:06:23.262 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testPageTitles
-19:06:23.262 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:06:23.693 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
-19:06:23.694 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testSearchNavigation
-19:06:23.694 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:06:25.279 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:06:25.279 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:06:28.558 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:06:28.558 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testSearchNavigation
-19:06:28.558 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
-19:06:36.077 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testInvalidSearch
-19:06:36.079 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Failure reason: java.lang.AssertionError: Should either show no results message or have zero products expected [true] but found [false]
-19:06:36.079 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+16:50:15.782 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Starting test class: NavigationTest
+16:50:15.784 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testHomePageElements
+16:50:15.786 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+16:50:15.788 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Completed test class: SearchTest
+16:50:15.792 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testPageTitles
+16:50:15.793 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:50:17.222 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:50:17.222 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:50:19.131 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:50:19.132 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testHomePageElements
+16:50:19.133 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
+16:50:19.134 [TestNG-test=Amazon Functional Tests-1] INFO  tests.NavigationTest - Starting homepage elements verification test
+16:50:37.775 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:50:37.776 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testPageTitles
+16:50:37.776 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+16:50:37.776 [TestNG-test=Amazon Functional Tests-2] INFO  tests.NavigationTest - Starting page titles verification test
+16:50:42.934 [TestNG-test=Amazon Functional Tests-1] INFO  tests.NavigationTest - Homepage elements test passed successfully
+16:50:42.935 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test passed: testHomePageElements
+16:50:42.936 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Test case passed: testHomePageElements
+16:50:42.937 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:50:42.940 [TestNG-test=Amazon Functional Tests-2] INFO  pages.HomePage - Search completed for: iPhone 15
+16:50:43.455 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - WebDriver closed successfully
+16:50:43.455 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testSearchNavigation
+16:50:43.455 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:50:44.982 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:50:44.982 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:50:49.370 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:50:49.371 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testSearchNavigation
+16:50:49.371 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
+16:50:49.373 [TestNG-test=Amazon Functional Tests-1] INFO  tests.NavigationTest - Starting navigation flow test
+16:50:49.378 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testPageTitles
+16:50:49.378 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure details: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
 	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
 	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
 	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
-	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:54) ~[classes/:?]
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
@@ -217,28 +267,31 @@ java.lang.IllegalAccessException: class listeners.TestListener cannot access a m
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-19:06:36.082 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testInvalidSearch
-19:06:36.349 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testInvalidSearch_20250731_190636.png
-19:06:36.349 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:06:36.754 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - WebDriver closed successfully
-19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Completed test class: SearchTest
-19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Starting test class: ProductTest
-19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testMultipleProducts
-19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:06:38.444 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:06:38.444 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:06:41.985 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:06:41.989 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testMultipleProducts
-19:06:41.989 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
-19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testSearchNavigation
-19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Failure reason: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
-19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+16:50:49.380 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testPageTitles
+16:50:49.525 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testPageTitles_20250801_165049.png
+16:50:49.525 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:50:49.975 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+16:50:49.977 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Starting test class: ProductTest
+16:50:49.978 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testMultipleProducts
+16:50:49.978 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:50:51.203 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:50:51.203 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:50:54.237 [TestNG-test=Amazon Functional Tests-1] INFO  pages.HomePage - Search completed for: iPhone 15
+16:50:55.333 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:50:55.335 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testMultipleProducts
+16:50:55.336 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+16:50:59.128 [TestNG-test=Amazon Functional Tests-2] INFO  pages.HomePage - Search completed for: iPhone 15
+16:52:10.241 [TestNG-test=Amazon Functional Tests-1] WARN  utils.ExceptionHandler - Timeout occurred during verify product details page: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+16:52:11.254 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ExceptionHandler - Retrying verify product details page attempt 2/3
+16:52:15.200 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testMultipleProducts
+16:52:15.200 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Timeout occurred. This might indicate performance issues or invalid waits.
+16:52:15.200 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure details: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
 	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
 	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
 	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
-	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:54) ~[classes/:?]
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
@@ -251,27 +304,90 @@ java.lang.IllegalAccessException: class listeners.TestListener cannot access a m
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testSearchNavigation
-19:07:47.905 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testSearchNavigation_20250731_190747.png
-19:07:47.908 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:07:48.316 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
-19:07:48.318 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Completed test class: NavigationTest
-19:07:48.320 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testProductDetails
-19:07:48.320 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
-19:07:49.969 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
-19:07:49.969 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
-19:07:53.328 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
-19:07:53.328 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testProductDetails
-19:07:53.329 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
-19:08:01.529 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testMultipleProducts
-19:08:01.529 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Failure reason: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
-19:08:01.530 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+16:52:15.204 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testMultipleProducts
+16:52:15.329 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testMultipleProducts_20250801_165215.png
+16:52:15.329 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:52:15.776 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+16:52:15.778 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testProductDetails
+16:52:15.779 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+16:52:17.078 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=20s
+16:52:17.079 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+16:52:25.420 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+16:52:25.421 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testProductDetails
+16:52:25.421 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+16:52:31.343 [TestNG-test=Amazon Functional Tests-1] WARN  utils.ExceptionHandler - Timeout occurred during verify product details page: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+16:52:32.349 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ExceptionHandler - Retrying verify product details page attempt 3/3
+16:52:34.332 [TestNG-test=Amazon Functional Tests-2] INFO  pages.HomePage - Search completed for: iPhone 15
+16:52:52.441 [TestNG-test=Amazon Functional Tests-1] WARN  utils.ExceptionHandler - Timeout occurred during verify product details page: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+16:52:52.442 [TestNG-test=Amazon Functional Tests-1] ERROR tests.NavigationTest - Navigation flow test failed: Failed to execute verify product details page after 3 attempts
+java.lang.RuntimeException: Failed to execute verify product details page after 3 attempts
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:49) ~[classes/:?]
+	at tests.NavigationTest.testSearchNavigation(NavigationTest.java:82) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230) ~[selenium-support-4.10.0.jar:?]
+	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31) ~[classes/:?]
+	at tests.NavigationTest.lambda$testSearchNavigation$2(NavigationTest.java:83) ~[test-classes/:?]
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54) ~[classes/:?]
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27) ~[classes/:?]
+	... 14 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#productTitle"}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [338d1dde661cf24302c72db180a8a0a0, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54764}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54764/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 338d1dde661cf24302c72db180a8a0a0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.10.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source) ~[?:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287) ~[selenium-support-4.10.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205) ~[selenium-support-4.10.0.jar:?]
+	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31) ~[classes/:?]
+	at tests.NavigationTest.lambda$testSearchNavigation$2(NavigationTest.java:83) ~[test-classes/:?]
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54) ~[classes/:?]
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27) ~[classes/:?]
+	... 14 more
+16:52:52.443 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testSearchNavigation
+16:52:52.443 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure details: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
 	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
 	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
 	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
-	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:54) ~[classes/:?]
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
@@ -284,19 +400,20 @@ java.lang.IllegalAccessException: class listeners.TestListener cannot access a m
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-19:08:01.531 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testMultipleProducts
-19:08:09.399 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testMultipleProducts_20250731_190801.png
-19:08:09.401 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:08:09.821 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - WebDriver closed successfully
-19:09:13.214 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testProductDetails
-19:09:13.229 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Failure reason: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
-19:09:13.229 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+16:52:52.445 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testSearchNavigation
+16:52:52.647 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testSearchNavigation_20250801_165252.png
+16:52:52.648 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:52:53.069 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - WebDriver closed successfully
+16:52:53.071 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Completed test class: NavigationTest
+16:53:50.149 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testProductDetails
+16:53:50.149 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Timeout occurred. This might indicate performance issues or invalid waits.
+16:53:50.149 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure details: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
 	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
 	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
 	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
 	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
-	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:54) ~[classes/:?]
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
@@ -309,12 +426,12 @@ java.lang.IllegalAccessException: class listeners.TestListener cannot access a m
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
-19:09:13.229 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testProductDetails
-19:09:13.355 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testProductDetails_20250731_190913.png
-19:09:13.355 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
-19:09:13.731 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
-19:09:13.732 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Completed test class: ProductTest
-19:09:13.732 [main] INFO  listeners.TestListener - Test Suite finished: Amazon Functional Tests
-19:09:14.098 [main] INFO  utils.ExtentReportManager - Extent Reports flushed successfully
-19:09:14.128 [main] INFO  base.BaseTest - Test suite execution completed
-19:09:14.144 [main] INFO  utils.ExtentReportManager - Extent Reports flushed successfully
+16:53:50.155 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testProductDetails
+16:53:50.332 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testProductDetails_20250801_165350.png
+16:53:50.332 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+16:53:50.849 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+16:53:50.850 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Completed test class: ProductTest
+16:53:50.851 [main] INFO  listeners.TestListener - Test Suite finished: Amazon Functional Tests
+16:53:51.402 [main] INFO  utils.ExtentReportManager - Extent Reports flushed successfully
+16:53:51.472 [main] INFO  base.BaseTest - Test suite execution completed
+16:53:51.494 [main] INFO  utils.ExtentReportManager - Extent Reports flushed successfully

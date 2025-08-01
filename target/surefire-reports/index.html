@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 5 failed,   3 passed</span>
+                    <span class="method-stats">8 methods, 6 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -109,6 +109,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Amazon_Test_Suite" title="tests.ProductTest" class="method navigator-link" hash-for-method="testMultipleProducts">testMultipleProducts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Amazon_Test_Suite" title="tests.NavigationTest" class="method navigator-link" hash-for-method="testPageTitles">testPageTitles</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -145,11 +150,6 @@
                         <a href="#" panel-name="suite-Amazon_Test_Suite" title="tests.NavigationTest" class="method navigator-link" hash-for-method="testHomePageElements">testHomePageElements</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Amazon_Test_Suite" title="tests.NavigationTest" class="method navigator-link" hash-for-method="testPageTitles">testPageTitles</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Amazon_Test_Suite -->
                   </li>
                 </ul>
@@ -170,26 +170,51 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSearchNavigation">
-                  </a> <!-- testSearchNavigation -->
-                  <span class="method-name">testSearchNavigation</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31)
-	at tests.NavigationTest.testSearchNavigation(NavigationTest.java:42)
+                  <a name="testPageTitles">
+                  </a> <!-- testPageTitles -->
+                  <span class="method-name">testPageTitles</span>
+                  <div class="stack-trace">java.lang.AssertionError: Search results page title should contain search term but was: Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in expected [true] but found [false]
+	at tests.NavigationTest.lambda$testPageTitles$4(NavigationTest.java:117)
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54)
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27)
+	at tests.NavigationTest.testPageTitles(NavigationTest.java:115)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify page titles during navigation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchNavigation">
+                  </a> <!-- testSearchNavigation -->
+                  <span class="method-name">testSearchNavigation</span>
+                  <div class="stack-trace">java.lang.RuntimeException: Failed to execute verify product details page after 3 attempts
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:49)
+	at tests.NavigationTest.testSearchNavigation(NavigationTest.java:82)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.id: productTitle&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pages.ProductDetailsPage.getProductTitle(ProductDetailsPage.java:31)
+	at tests.NavigationTest.lambda$testSearchNavigation$2(NavigationTest.java:83)
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54)
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27)
+	... 14 more
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#productTitle&quot;}
   (Session info: chrome=138.0.7204.101)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d8e3d048ab6ab7640f91390dca284f6b, findElement {using=id, value=productTitle}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61915/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d8e3d048ab6ab7640f91390dca284f6b
+Command: [338d1dde661cf24302c72db180a8a0a0, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54764}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54764/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 338d1dde661cf24302c72db180a8a0a0
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -203,13 +228,13 @@ Session ID: d8e3d048ab6ab7640f91390dca284f6b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-	... 15 more
+	... 18 more
 ... Removed 13 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -229,15 +254,18 @@ Session ID: d8e3d048ab6ab7640f91390dca284f6b
                   <a name="testInvalidSearch">
                   </a> <!-- testInvalidSearch -->
                   <span class="method-name">testInvalidSearch</span>
-                  <div class="stack-trace">java.lang.AssertionError: Should either show no results message or have zero products expected [true] but found [false]
-	at tests.SearchTest.testInvalidSearch(SearchTest.java:77)
+                  <div class="stack-trace">java.lang.AssertionError: Should show no results message or zero products expected [true] but found [false]
+	at tests.SearchTest.lambda$testInvalidSearch$1(SearchTest.java:84)
+	at utils.ExceptionHandler.handleSpecificExceptions(ExceptionHandler.java:54)
+	at utils.ExceptionHandler.handleException(ExceptionHandler.java:27)
+	at tests.SearchTest.testInvalidSearch(SearchTest.java:81)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
 ... Removed 13 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Verify search with invalid product name)                  </em>
+(Test search with invalid product name)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -245,22 +273,20 @@ Session ID: d8e3d048ab6ab7640f91390dca284f6b
                   <a name="testValidSearch">
                   </a> <!-- testValidSearch -->
                   <span class="method-name">testValidSearch</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to perform search: Error communicating with the remote browser. It may have died.
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Could not find any product with valid text
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc5a973c485a4b2e3e7858fd2c16974e, findElement {using=id, value=nav-search-submit-button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dc5a973c485a4b2e3e7858fd2c16974e
-	at pages.HomePage.searchProduct(HomePage.java:76)
-	at tests.SearchTest.testValidSearch(SearchTest.java:13)
+Driver info: driver.version: unknown
+	at pages.SearchResultsPage.getFirstProductName(SearchResultsPage.java:299)
+	at tests.SearchTest.testValidSearch(SearchTest.java:38)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
 ... Removed 10 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Verify search functionality with valid product)                  </em>
+(Test search with valid product name)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -290,9 +316,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [20c51b5acedd7e5804bd0b9e250f64ba, findElement {using=id, value=productTitle}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61994/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 20c51b5acedd7e5804bd0b9e250f64ba
+Command: [a3b0c114e8f8784931835a82d7386d01, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54838}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54838/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3b0c114e8f8784931835a82d7386d01
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -306,7 +332,7 @@ Session ID: 20c51b5acedd7e5804bd0b9e250f64ba
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
@@ -338,9 +364,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15bd3772126287832e5af7ea1a71d5b8, findElement {using=id, value=productTitle}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62123/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 15bd3772126287832e5af7ea1a71d5b8
+Command: [29a8b481e31033b0009aa69b030af478, findElement {using=id, value=productTitle}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54985/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29a8b481e31033b0009aa69b030af478
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -354,7 +380,7 @@ Session ID: 15bd3772126287832e5af7ea1a71d5b8
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
@@ -384,15 +410,6 @@ Session ID: 15bd3772126287832e5af7ea1a71d5b8
 (Verify all homepage elements are present)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testPageTitles">
-                  </a> <!-- testPageTitles -->
-                  <span class="method-name">testPageTitles</span>
-                  <em>
-(Verify page titles during navigation)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Amazon_Test_Suite-class-passed -->
           <div class="suite-Amazon_Test_Suite-class-passed">
@@ -407,7 +424,7 @@ Session ID: 15bd3772126287832e5af7ea1a71d5b8
                   </a> <!-- testEmptySearch -->
                   <span class="method-name">testEmptySearch</span>
                   <em>
-(Verify search behavior with empty string)                  </em>
+(Test search with empty string)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -480,42 +497,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testProductDetails')
-data.setCell(0, 2, 'tests.ProductTest')
-data.setCell(0, 3, 79886);
+data.setCell(0, 1, 'testSearchNavigation')
+data.setCell(0, 2, 'tests.NavigationTest')
+data.setCell(0, 3, 123072);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMultipleProducts')
+data.setCell(1, 1, 'testProductDetails')
 data.setCell(1, 2, 'tests.ProductTest')
-data.setCell(1, 3, 79541);
+data.setCell(1, 3, 84728);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSearchNavigation')
-data.setCell(2, 2, 'tests.NavigationTest')
-data.setCell(2, 3, 79134);
+data.setCell(2, 1, 'testMultipleProducts')
+data.setCell(2, 2, 'tests.ProductTest')
+data.setCell(2, 3, 79864);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testInvalidSearch')
+data.setCell(3, 1, 'testValidSearch')
 data.setCell(3, 2, 'tests.SearchTest')
-data.setCell(3, 3, 38730);
+data.setCell(3, 3, 53013);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testPageTitles')
-data.setCell(4, 2, 'tests.NavigationTest')
-data.setCell(4, 3, 16988);
+data.setCell(4, 1, 'testInvalidSearch')
+data.setCell(4, 2, 'tests.SearchTest')
+data.setCell(4, 3, 46531);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testValidSearch')
-data.setCell(5, 2, 'tests.SearchTest')
-data.setCell(5, 3, 2245);
+data.setCell(5, 1, 'testHomePageElements')
+data.setCell(5, 2, 'tests.NavigationTest')
+data.setCell(5, 3, 23803);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testEmptySearch')
-data.setCell(6, 2, 'tests.SearchTest')
-data.setCell(6, 3, 469);
+data.setCell(6, 1, 'testPageTitles')
+data.setCell(6, 2, 'tests.NavigationTest')
+data.setCell(6, 3, 11601);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testHomePageElements')
-data.setCell(7, 2, 'tests.NavigationTest')
-data.setCell(7, 3, 277);
+data.setCell(7, 1, 'testEmptySearch')
+data.setCell(7, 2, 'tests.SearchTest')
+data.setCell(7, 3, 1703);
 window.suiteTableData['Amazon_Test_Suite']= { tableData: data, tableDiv: 'times-div-Amazon_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-Amazon_Test_Suite">
               </div> <!-- times-div-Amazon_Test_Suite -->
             </div> <!-- times-div -->
@@ -545,9 +562,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">tests.ProductTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
                 <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">beforeSuite</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -561,166 +578,165 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">beforeSuite(org.testng.TestRunner@87abc48)</span>
+                <span class="method-name">beforeSuite(org.testng.TestRunner@432034a)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">273 ms</span>
+                <span class="method-start">369 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp([TestResult name={null} status=CREATED method=SearchTest.testValidSearch()[pri:0, instance:tests.Sea...)</span>
-                <span class="method-start">287 ms</span>
+                <span class="method-start">381 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp([TestResult name={null} status=CREATED method=SearchTest.testEmptySearch()[pri:0, instance:tests.Sea...)</span>
-                <span class="method-start">287 ms</span>
+                <span class="method-start">381 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEmptySearch</span>
+                <span class="method-start">18122 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testValidSearch</span>
-                <span class="method-start">9848 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testEmptySearch</span>
-                <span class="method-start">11309 ms</span>
+                <span class="method-start">19753 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testEmptySearch status=SUCCESS method=SearchTest.testEmptySearch()[pri:0, instance:...)</span>
-                <span class="method-start">11781 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testValidSearch status=FAILURE method=SearchTest.testValidSearch()[pri:0, instance:...)</span>
-                <span class="method-start">12121 ms</span>
+                <span class="method-start">19828 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp([TestResult name={null} status=CREATED method=SearchTest.testInvalidSearch()[pri:0, instance:tests.S...)</span>
-                <span class="method-start">12151 ms</span>
+                <span class="method-start">20352 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInvalidSearch</span>
+                <span class="method-start">25614 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testInvalidSearch status=FAILURE method=SearchTest.testInvalidSearch()[pri:0, insta...)</span>
+                <span class="method-start">72161 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testValidSearch status=FAILURE method=SearchTest.testValidSearch()[pri:0, instance:...)</span>
+                <span class="method-start">72782 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.NavigationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">12162 ms</span>
+                <span class="method-start">72798 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp([TestResult name={null} status=CREATED method=NavigationTest.testHomePageElements()[pri:0, instance:...)</span>
-                <span class="method-start">12163 ms</span>
+                <span class="method-start">72799 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([TestResult name={null} status=CREATED method=NavigationTest.testPageTitles()[pri:0, instance:tests....)</span>
+                <span class="method-start">72804 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testInvalidSearch</span>
-                <span class="method-start">15425 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">72804 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.NavigationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testHomePageElements</span>
-                <span class="method-start">17033 ms</span>
+                <span class="method-start">76148 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testPageTitles</span>
+                <span class="method-start">94792 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testHomePageElements status=SUCCESS method=NavigationTest.testHomePageElements()[pr...)</span>
-                <span class="method-start">17311 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp([TestResult name={null} status=CREATED method=NavigationTest.testPageTitles()[pri:0, instance:tests....)</span>
-                <span class="method-start">17789 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testPageTitles</span>
-                <span class="method-start">24341 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testPageTitles status=SUCCESS method=NavigationTest.testPageTitles()[pri:0, instanc...)</span>
-                <span class="method-start">41339 ms</span>
+                <span class="method-start">99951 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp([TestResult name={null} status=CREATED method=NavigationTest.testSearchNavigation()[pri:0, instance:...)</span>
-                <span class="method-start">41772 ms</span>
+                <span class="method-start">100471 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testSearchNavigation</span>
-                <span class="method-start">46636 ms</span>
+                <span class="method-start">106387 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.SearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testInvalidSearch status=FAILURE method=SearchTest.testInvalidSearch()[pri:0, insta...)</span>
-                <span class="method-start">54160 ms</span>
+                <span class="method-name">tearDown([TestResult name=testPageTitles status=FAILURE method=NavigationTest.testPageTitles()[pri:0, instanc...)</span>
+                <span class="method-start">106396 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">54832 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp([TestResult name={null} status=CREATED method=ProductTest.testMultipleProducts()[pri:0, instance:tes...)</span>
-                <span class="method-start">54835 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">54835 ms</span>
+                <span class="method-start">106993 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([TestResult name={null} status=CREATED method=ProductTest.testMultipleProducts()[pri:0, instance:tes...)</span>
+                <span class="method-start">106994 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testMultipleProducts</span>
-                <span class="method-start">60066 ms</span>
+                <span class="method-start">112351 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testMultipleProducts status=FAILURE method=ProductTest.testMultipleProducts()[pri:0...)</span>
+                <span class="method-start">192218 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([TestResult name={null} status=CREATED method=ProductTest.testProductDetails()[pri:0, instance:tests...)</span>
+                <span class="method-start">192794 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testProductDetails</span>
+                <span class="method-start">202437 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.NavigationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testSearchNavigation status=FAILURE method=NavigationTest.testSearchNavigation()[pr...)</span>
-                <span class="method-start">125770 ms</span>
+                <span class="method-start">229460 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">126395 ms</span>
+                <span class="method-start">230085 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp([TestResult name={null} status=CREATED method=ProductTest.testProductDetails()[pri:0, instance:tests...)</span>
-                <span class="method-start">126397 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testProductDetails</span>
-                <span class="method-start">131406 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testMultipleProducts status=FAILURE method=ProductTest.testMultipleProducts()[pri:0...)</span>
-                <span class="method-start">139609 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testProductDetails status=FAILURE method=ProductTest.testProductDetails()[pri:0, in...)</span>
-                <span class="method-start">211307 ms</span>
+                <span class="method-start">287171 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">211810 ms</span>
+                <span class="method-start">287866 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">212206 ms</span>
+                <span class="method-start">288487 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

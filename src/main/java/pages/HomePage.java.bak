@@ -3,6 +3,7 @@ package pages;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,10 +32,9 @@ public class HomePage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
-        logger.debug("HomePage initialized");
     }
 
-    public boolean isLogoDisplayed() throws Exception {
+    public boolean isLogoDisplayed() {
         logger.debug("Checking logo visibility");
         return ExceptionHandler.handleException(driver, "check logo visibility", d -> {
             WebElement logo = SmartElementFinder.findElement(d, By.id("nav-logo-sprites"), "Amazon Logo");
@@ -43,29 +43,9 @@ public class HomePage {
         });
     }
 
-    public boolean isSearchBarDisplayed() throws Exception {
-        logger.debug("Checking search bar visibility");
-        return ExceptionHandler.handleException(driver, "check search bar visibility", d -> {
-            WebElement searchInput = SmartElementFinder.findElement(d, By.id("twotabsearchtextbox"), "Search Box");
-            wait.until(ExpectedConditions.visibilityOf(searchInput));
-            return searchInput.isDisplayed();
-        });
-    }
-
-    public boolean isSearchBarEnabled() throws Exception {
-        logger.debug("Checking if search bar is enabled");
-        return ExceptionHandler.handleException(driver, "check search bar enabled state", d -> {
-            WebElement searchInput = SmartElementFinder.findElement(d, By.id("twotabsearchtextbox"), "Search Box");
-            wait.until(ExpectedConditions.elementToBeClickable(searchInput));
-            return searchInput.isEnabled();
-        });
-    }
-
-    public SearchResultsPage searchProduct(String productName) throws Exception {
+    public SearchResultsPage searchProduct(String productName) {
         if (productName == null || productName.trim().isEmpty()) {
-            String message = "Product name cannot be null or empty";
-            logger.error(message);
-            throw new IllegalArgumentException(message);
+            throw new IllegalArgumentException("Product name cannot be null or empty");
         }
 
         logger.debug("Searching for: {}", productName);
@@ -83,9 +63,44 @@ public class HomePage {
             searchBtn.click();
 
             wait.until(ExpectedConditions.urlContains("s?k="));
-            logger.info("Search completed for: {}", searchTerm);
-            
             return new SearchResultsPage(d);
         });
+    }
+}
+            
+            // Ensure the search term is entered correctly
+            wait.until(driver -> search.getAttribute("value").equals(productName.trim()));
+            
+            // Wait for search button and ensure it's clickable
+            wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+            
+            // Try multiple click strategies
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+            } catch (Exception e) {
+                try {
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
+                } catch (Exception je) {
+                    // Final fallback: try submitting the form
+                    search.submit();
+                }
+            }
+            
+            // Wait for URL to change, indicating search is initiated
+            wait.until(driver -> driver.getCurrentUrl().contains("s?k="));
+            
+            return new SearchResultsPage(driver);
+        } catch (Exception e) {
+            System.out.println("Error during search: " + e.getMessage());
+            throw new RuntimeException("Failed to perform search: " + e.getMessage());
+        }
+    }
+
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
+    public boolean isSearchBoxEnabled() {
+        return wait.until(ExpectedConditions.elementToBeClickable(searchBox)).isEnabled();
     }
 }

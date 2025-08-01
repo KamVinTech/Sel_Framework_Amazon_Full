@@ -17,6 +17,7 @@
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="testPageTitles"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- tests.NavigationTest -->

@@ -1,4 +1,5 @@
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\com\example\pages\ProductDetailsPage.java
+C:\Users\sachin.sharma\copilot-selenium\src\main\java\utils\SmartElementFinder.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\pages\SearchResultsPage.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\listeners\TestListener.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\constants\FrameworkConstants.java
@@ -11,6 +12,7 @@ C:\Users\sachin.sharma\copilot-selenium\src\main\java\utils\ScreenshotUtils.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\pages\HomePage.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\utils\ExtentReportManager.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\com\example\pages\SearchResultsPage.java
+C:\Users\sachin.sharma\copilot-selenium\src\main\java\utils\ExceptionHandler.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\utils\ExcelDataProvider.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\com\example\pages\HomePage.java
 C:\Users\sachin.sharma\copilot-selenium\src\main\java\utils\WebDriverFactory.java

@@ -9,10 +9,7 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.SearchResultsPage;
 import pages.ProductDetailsPage;
-import utils.ConfigReader;
-import utils.WebDriverFactory;
-import utils.ScreenshotUtils;
-import utils.ExtentReportManager;
+import utils.*;
 import com.aventstack.extentreports.ExtentTest;
 
 public class BaseTest {
@@ -41,13 +38,18 @@ public class BaseTest {
                                                       result.getMethod().getDescription());
             logger.info("Setting up test: " + result.getMethod().getMethodName());
             
-            // Initialize WebDriver using factory
-            driver = WebDriverFactory.getDriver();
+            // Initialize WebDriver with smart exception handling
+            ExceptionHandler.handleException(null, "initialize WebDriver", driver -> {
+                this.driver = WebDriverFactory.getDriver();
+                return this.driver;
+            });
             
-            // Initialize page objects
-            homePage = new HomePage(driver);
+            // Initialize page objects with retry mechanism
+            ExceptionHandler.retryAction(() -> {
+                homePage = new HomePage(driver);
+            }, "initialize HomePage");
             
-            // Navigate to application URL
+            // Navigate to application URL with smart handling
             String baseUrl = ConfigReader.getValue("app.url", "https://www.amazon.in");
             driver.get(baseUrl);
             logger.info("Navigated to: " + baseUrl);

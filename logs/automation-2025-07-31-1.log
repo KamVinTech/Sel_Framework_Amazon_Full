@@ -1,0 +1,320 @@
+19:05:41.938 [main] INFO  base.BaseTest - Starting test suite execution
+19:05:41.953 [main] INFO  utils.ConfigReader - Loaded configuration from: src/test/resources/config/config.properties
+19:05:41.953 [main] WARN  utils.ConfigReader - Could not load configuration from: src/test/resources/config/dev.properties
+19:05:42.168 [main] INFO  utils.ExtentReportManager - Extent Reports initialized successfully
+19:05:42.184 [main] INFO  listeners.TestListener - Test Suite started: Amazon Functional Tests
+19:05:42.196 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Starting test class: SearchTest
+19:05:42.217 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testValidSearch
+19:05:42.217 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testEmptySearch
+19:05:42.220 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:05:42.220 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:05:48.102 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:05:48.102 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:05:48.102 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:05:48.102 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:05:51.759 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:05:51.774 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testValidSearch
+19:05:51.775 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
+19:05:53.230 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:05:53.231 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testEmptySearch
+19:05:53.232 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+19:05:53.702 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testEmptySearch
+19:05:53.704 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testEmptySearch
+19:05:53.704 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:05:54.017 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testValidSearch
+19:05:54.017 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Failure reason: java.lang.RuntimeException: Failed to perform search: Error communicating with the remote browser. It may have died.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc5a973c485a4b2e3e7858fd2c16974e, findElement {using=id, value=nav-search-submit-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc5a973c485a4b2e3e7858fd2c16974e
+19:05:54.021 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
+	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+19:05:54.044 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testValidSearch
+19:05:54.064 [TestNG-test=Amazon Functional Tests-1] ERROR utils.ScreenshotUtils - Failed to capture screenshot: Error communicating with the remote browser. It may have died.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc5a973c485a4b2e3e7858fd2c16974e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc5a973c485a4b2e3e7858fd2c16974e
+org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc5a973c485a4b2e3e7858fd2c16974e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\SACHIN~1.SHA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61447/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc5a973c485a4b2e3e7858fd2c16974e
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:316) ~[selenium-remote-driver-4.10.0.jar:?]
+	at utils.ScreenshotUtils.captureScreenshot(ScreenshotUtils.java:31) ~[classes/:?]
+	at base.BaseTest.tearDown(BaseTest.java:70) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:11292
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.10.0.jar:?]
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.10.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.10.0.jar:?]
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.10.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:97) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171) ~[selenium-remote-driver-4.10.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531) ~[selenium-remote-driver-4.10.0.jar:?]
+	... 23 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:11292
+	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20) ~[async-http-client-2.12.3.jar:?]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/[0:0:0:0:0:0:0:1]:11292
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1060) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	... 1 more
+19:05:54.073 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Error in test cleanup: ScreenCapture path must not be null or empty
+java.lang.IllegalArgumentException: ScreenCapture path must not be null or empty
+	at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12) ~[extentreports-5.1.1.jar:?]
+	at com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(ExtentTest.java:1099) ~[extentreports-5.1.1.jar:?]
+	at com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(ExtentTest.java:1107) ~[extentreports-5.1.1.jar:?]
+	at base.BaseTest.tearDown(BaseTest.java:72) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+19:05:54.073 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testInvalidSearch
+19:05:54.079 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+19:05:54.084 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Starting test class: NavigationTest
+19:05:54.086 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testHomePageElements
+19:05:54.086 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:05:55.601 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:05:55.602 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:05:57.346 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:05:57.347 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testInvalidSearch
+19:05:57.347 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
+19:05:58.954 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:05:58.956 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testHomePageElements
+19:05:58.957 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+19:05:59.232 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testHomePageElements
+19:05:59.233 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testHomePageElements
+19:05:59.234 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:05:59.707 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+19:05:59.712 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testPageTitles
+19:05:59.713 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:06:02.880 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:06:02.880 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:06:06.261 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:06:06.264 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testPageTitles
+19:06:06.264 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+19:06:23.261 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test passed: testPageTitles
+19:06:23.262 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Test case passed: testPageTitles
+19:06:23.262 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:06:23.693 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+19:06:23.694 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testSearchNavigation
+19:06:23.694 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:06:25.279 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:06:25.279 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:06:28.558 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:06:28.558 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testSearchNavigation
+19:06:28.558 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+19:06:36.077 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testInvalidSearch
+19:06:36.079 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Failure reason: java.lang.AssertionError: Should either show no results message or have zero products expected [true] but found [false]
+19:06:36.079 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
+	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+19:06:36.082 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testInvalidSearch
+19:06:36.349 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testInvalidSearch_20250731_190636.png
+19:06:36.349 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:06:36.754 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - WebDriver closed successfully
+19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Completed test class: SearchTest
+19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Starting test class: ProductTest
+19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Setting up test: testMultipleProducts
+19:06:36.757 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:06:38.444 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:06:38.444 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:06:41.985 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:06:41.989 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test started: testMultipleProducts
+19:06:41.989 [TestNG-test=Amazon Functional Tests-1] INFO  listeners.TestListener - Test parameters: []
+19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testSearchNavigation
+19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Failure reason: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
+	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+19:07:47.692 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testSearchNavigation
+19:07:47.905 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testSearchNavigation_20250731_190747.png
+19:07:47.908 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:07:48.316 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+19:07:48.318 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Completed test class: NavigationTest
+19:07:48.320 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Setting up test: testProductDetails
+19:07:48.320 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Creating WebDriver instance for browser: chrome
+19:07:49.969 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver configured with implicitWait=10s, pageLoadTimeout=30s, scriptTimeout=30s
+19:07:49.969 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - WebDriver initialized successfully
+19:07:53.328 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Navigated to: https://www.amazon.in
+19:07:53.328 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test started: testProductDetails
+19:07:53.329 [TestNG-test=Amazon Functional Tests-2] INFO  listeners.TestListener - Test parameters: []
+19:08:01.529 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Test failed: testMultipleProducts
+19:08:01.529 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Failure reason: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+19:08:01.530 [TestNG-test=Amazon Functional Tests-1] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
+	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+19:08:01.531 [TestNG-test=Amazon Functional Tests-1] ERROR base.BaseTest - Test case failed: testMultipleProducts
+19:08:09.399 [TestNG-test=Amazon Functional Tests-1] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testMultipleProducts_20250731_190801.png
+19:08:09.401 [TestNG-test=Amazon Functional Tests-1] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:08:09.821 [TestNG-test=Amazon Functional Tests-1] INFO  base.BaseTest - WebDriver closed successfully
+19:09:13.214 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Test failed: testProductDetails
+19:09:13.229 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Failure reason: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: productTitle' (tried for 10 second(s) with 500 milliseconds interval)
+19:09:13.229 [TestNG-test=Amazon Functional Tests-2] ERROR listeners.TestListener - Error capturing failure screenshot: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+java.lang.IllegalAccessException: class listeners.TestListener cannot access a member of class base.BaseTest with modifiers "protected"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:398) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1156) ~[?:?]
+	at java.base/java.lang.reflect.Field.get(Field.java:441) ~[?:?]
+	at listeners.TestListener.onTestFailure(TestListener.java:48) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+19:09:13.229 [TestNG-test=Amazon Functional Tests-2] ERROR base.BaseTest - Test case failed: testProductDetails
+19:09:13.355 [TestNG-test=Amazon Functional Tests-2] INFO  utils.ScreenshotUtils - Screenshot captured: .\screenshots\testProductDetails_20250731_190913.png
+19:09:13.355 [TestNG-test=Amazon Functional Tests-2] INFO  utils.WebDriverFactory - Quitting WebDriver instance
+19:09:13.731 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - WebDriver closed successfully
+19:09:13.732 [TestNG-test=Amazon Functional Tests-2] INFO  base.BaseTest - Completed test class: ProductTest
+19:09:13.732 [main] INFO  listeners.TestListener - Test Suite finished: Amazon Functional Tests
+19:09:14.098 [main] INFO  utils.ExtentReportManager - Extent Reports flushed successfully
+19:09:14.128 [main] INFO  base.BaseTest - Test suite execution completed
+19:09:14.144 [main] INFO  utils.ExtentReportManager - Extent Reports flushed successfully
