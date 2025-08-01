@@ -1,0 +1,8 @@
+TestCase ID,Product Name,Category,Expected Results,Price Range,Tags
+TC_SEARCH_001,iPhone 15 Pro Max,Electronics,Multiple results should be displayed with exact match,>100000,Smoke
+TC_SEARCH_002,Samsung Galaxy S24 Ultra,Electronics,At least 5 results with Samsung phones,>80000,Smoke
+TC_SEARCH_003,Invalid Product xyzabc123,Invalid,No results message should be displayed,0,Negative
+TC_SEARCH_004,MacBook Pro,Electronics,Should show Apple laptops,>100000,Regression
+TC_SEARCH_005,iPad Pro,Electronics,Should show Apple tablets,>50000,Regression
+TC_SEARCH_006,,Invalid,Should not perform search,0,Negative
+TC_SEARCH_007,Sony WH-1000XM5,Electronics,Should show exact product match,>25000,Regression

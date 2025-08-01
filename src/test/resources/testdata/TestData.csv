@@ -1,0 +1,7 @@
+Product Name,Category,Expected Count,Price Range
+iPhone 15 Pro Max,Electronics,5,>100000
+Samsung Galaxy S24 Ultra,Electronics,5,>80000
+Sony WH-1000XM5,Electronics,3,>20000
+Invalid Product xyzabc123,Invalid,-1,0
+MacBook Pro M3,Electronics,4,>150000
+iPad Pro 2024,Electronics,3,>80000
